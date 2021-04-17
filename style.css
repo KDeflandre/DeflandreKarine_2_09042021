@@ -39,9 +39,6 @@ header p {
     height: auto;
     margin-bottom: 20px;
 }
-#logo h1 {
-
-}
 
 #logo p {
     margin-bottom: 20px;
@@ -72,6 +69,7 @@ nav a {
 nav a:hover {
     color: #0065FC;
     border-top: 2px solid #0065FC;
+    transition: all .10s ease;
 }
 
 /* Barre de recherche */
@@ -81,14 +79,14 @@ nav a:hover {
     border-radius: 10px;
 }
 
-input {
+#barre-recherche input {
     border:1px solid #F2F2F2;
     height: 33px;
     outline: none;
     text-align: center;
 }
 
-input:target{
+#barre-recherche input:target{
     background-color: #555;
     }
 
@@ -126,7 +124,7 @@ input:target{
     margin-top: 30px;
 }
 
-#filtres h2 {
+#filtres h3 {
     margin-left: 10px;
     margin-right: 30px;
 }
@@ -160,6 +158,7 @@ input:target{
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
 
 .filtrestxt {
@@ -229,11 +228,11 @@ a {
     text-decoration: none;
 }
 
-h1{
+h2{
     font-size: 1.2em;
 }
 
-h2 {
+h3 {
     font-size: 0.9em;
     font-style: oblique;
     color:black;
@@ -261,14 +260,14 @@ section {
     padding:30px 20px 35px 20px;
 
 }
-#hebergement-marseille h1 {
+#hebergement-marseille h2 {
     padding-bottom: 5px;
     padding-left: 7px;
     text-align: left;
     margin-left: 25px;
 }
 
-#hebergement-marseille h2 {
+#hebergement-marseille h3 {
     font-size: 1em;
     padding-top: 10px;
 }
@@ -305,8 +304,9 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
-#cannebiere h2, p, #lot-quatre-etoiles {
+#cannebiere h3, p, .stars-4 {
     margin:5px 5px 5px 10px; 
 }
 
@@ -335,9 +335,10 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
 
-#hotelport h2, p, #lot-cinq-etoiles {
+#hotelport h3, p, .stars-5 {
     margin:5px 5px 5px 10px; 
 }
 
@@ -366,6 +367,7 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
 
 #hotelmouettes img {
@@ -377,7 +379,7 @@ section {
     border-top-right-radius: 15px;
 }
 
-#hotelmouettes h2, p, #lot-quatre-etoiles {
+#hotelmouettes h3, p, .stars-4 {
     margin:5px 5px 5px 10px; 
 }
 
@@ -397,6 +399,7 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
 
 #hotelmer img {
@@ -408,7 +411,7 @@ section {
     border-top-right-radius: 15px;
 }
 
-#hotelmer h2, p, #lot-trois-etoiles {
+#hotelmer h3, p, .stars-3 {
     margin:5px 5px 5px 10px; 
 }
 
@@ -428,6 +431,7 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
 }
 
 #aubergepanier img {
@@ -439,7 +443,7 @@ section {
     border-top-right-radius: 15px;
 }
 
-#aubergepanier h2, p, #lot-quatre-etoiles {
+#aubergepanier h3, p, .stars-4 {
     margin:5px 5px 5px 10px; 
 }
 
@@ -459,6 +463,8 @@ section {
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
+    transition: all .25s ease;
+
 }
 
 #hotelamina img {
@@ -470,33 +476,45 @@ section {
     border-top-right-radius: 15px;
 }
 
-#hotelamina h2 ,p ,#lot-cinq-etoiles {
+#hotelamina h3 ,p ,.stars-5 {
     margin:5px 5px 5px 10px; 
 }
 
-.troisetoiles {
-    color:#0065FC;
-}
+/* Styles des étoiles de notation */
 
-.etoilegrise {
+.stars i {
     color:#d8d7d7;
-}
-
-.fa-star {
-    margin-right: 3px;
-}
-
-#lot-quatre-etoiles {
-    display:flex;
+    margin-right: 0px;
     font-size: 0.9em;
+}
+
+.stars.stars-5 i {
     color:#0065FC;
 }
 
-#lot-cinq-etoiles {
-    display:flex;
-    font-size:0.9em;
+.stars.stars-1 i:nth-child(1){
+    color: #0065FC;
+}
+
+.stars.stars-2 i:nth-child(1), 
+.stars.stars-2 i:nth-child(2),{
+    color: #0065FC;
+}
+
+.stars.stars-3 i:nth-child(1), 
+.stars.stars-3 i:nth-child(2), 
+.stars.stars-3 i:nth-child(3){
     color:#0065FC;
 }
+
+.stars.stars-4 i:nth-child(1), 
+.stars.stars-4 i:nth-child(2), 
+.stars.stars-4 i:nth-child(3), 
+.stars.stars-4 i:nth-child(4){
+    color:#0065FC;
+}
+
+/* Lien afficher plus en dessous de Hébergement à Marseille */
 
 #afficherplus {
     font-size: 1.2em;
@@ -504,6 +522,7 @@ section {
     margin-top: 10px;
     text-align: left;
 }
+/* Aside, les plus populaires */
 
 aside {
         width: 25%;
@@ -567,9 +586,12 @@ aside {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-#hotelsoleil h2, p, #lot-cinq-etoiles {
-    margin:5px 15px 5px 25px; 
+
+#hotelsoleil a {
+    margin:5px 55px 5px 25px; 
+    padding-left: 40px;
 }
+
 
 #chambrecoeur {
     width:90%;
