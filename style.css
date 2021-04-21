@@ -287,7 +287,6 @@ nav a:hover {
     height: auto;
     background-color: #F2F2F2;
     padding:30px 20px 35px 20px;
-
 }
 
 #hebergement-marseille a {
@@ -310,7 +309,14 @@ nav a:hover {
     color:black;
 }
 
-#vignettes1 {
+#vignettes {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+/* #vignettes1 {
     display:flex;
     justify-content: space-around;
     margin-bottom: 20px;
@@ -319,7 +325,7 @@ nav a:hover {
 #vignettes2 {
     display:flex;
     justify-content: space-around;
-}
+} */
 
 .info-hebergement {
     
@@ -334,7 +340,7 @@ nav a:hover {
     border-radius: 25px;
     background-color: white;
     padding:5px;
-    margin:5px;
+    margin: 10px 0 25px 0;
     box-shadow:10px 8px 10px rgb(189, 187, 187) ;
 }
 
@@ -898,8 +904,8 @@ footer a {
         width: auto;
     }
 
-    #vignette1 {
-        flex-direction: column;
+    #vignettes {
+       
         width: auto;
     }
     #cannebiere #hotelport #hotelmouettes {
@@ -907,9 +913,21 @@ footer a {
         flex-direction:initial;
     }
 
-    #vignette2 {
-        flex-direction: column;
-        width: auto;
-    }
+}
 
+@media all and (max-width:980px) {
+
+    #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
+        width: 200px;
+        height: 180px;
+    }
+    
+}
+
+@media all and (max-width:500px) {
+    #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
+        width:100%;
+        height: 220px;
+        margin-bottom: 20px;
+    }
 }
