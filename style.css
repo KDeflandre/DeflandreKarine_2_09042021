@@ -870,3 +870,46 @@ footer a {
 .Assistance a:hover {
     color: #0065FC;
 }
+
+/* Responsive design */
+
+@media all and (max-width:1024px) {
+    html {
+        width:auto;
+    }
+
+    nav {
+        width: auto;
+        text-align: left;
+    }
+
+    section {
+        flex-direction: column;
+    }
+    
+    #hebergement-marseille {
+        order:2;
+        width: auto;
+        padding-bottom: 25px;
+    }
+
+    #lespluspopulaires {
+        order:1;
+        width: auto;
+    }
+
+    #vignette1 {
+        flex-direction: column;
+        width: auto;
+    }
+    #cannebiere #hotelport #hotelmouettes {
+        display:flex;
+        flex-direction:initial;
+    }
+
+    #vignette2 {
+        flex-direction: column;
+        width: auto;
+    }
+
+}
