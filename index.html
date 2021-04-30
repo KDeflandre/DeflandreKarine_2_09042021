@@ -11,33 +11,41 @@
   </head>
 
   <body>
-    <div id="bloc-page">
+    
+    <div class="container">
       <header>
         <div id="logo">
           <img src="images/logo/Reservia.svg" alt="Logo du site Reservia" />
+        </div>
+
+        <div class="navigation">
+        <nav>
+          <ul>
+            <li class="navmobile"><a href="#">Hébergements</a></li>
+            <li class="navmobile"><a href="#">Activités</a></li>
+          </ul>
+        </nav>
+
+      <p><a class="sinscrire" href="#">S'inscrire</a></p>
+      </div>
+
+      </header>
+
+      <div id="barre-recherche">
+        <div class="titresite">
           <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
           <p>En plein centre ville ou en pleine nature</p>
         </div>
 
-        <nav>
-          <ul>
-            <li><a href="#">Hébergements</a></li>
-            <li><a href="#">Activités</a></li>
-            <li><a class="sinscrire" href="#">S'inscrire</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <div id="barre-recherche">
-        <i class="fas fa-map-marker-alt"></i>
-        <form method="POST" action="recherche.php">
-          <input
-            type="search"
-            value="Marseille, France"
-            onclick="this.value='';"
-          />
+        <span class="recherche">
+          <form method="POST" action="#">
+        <span class="mapmarker"> <i class="fas fa-map-marker-alt"></i> </span>
+        
+          <input class="zonerecherche" type="search" value="Marseille, France"  />
+          <input class="bouton-rechercher" type="submit" value="Rechercher">
+          <button id="bouton-rechercher" type="submit" value="Rechercher"> <i class="fas fa-search"> </i> </button>
         </form>
-        <a href="#" class="bouton-rechercher">Rechercher</a>
+        </span>
       </div>
 
       <div id="filtres">
@@ -89,7 +97,8 @@
         <div id="hebergement-marseille">
           <h2>Hébergements à Marseille</h2>
 
-          <div id="vignettes1">
+            <div id="vignettes">
+         
             <div id="cannebiere">
               <a href="#">
                 <img
@@ -148,10 +157,9 @@
                   </div>
                   </div>
               </a>
-            </div>
           </div>
 
-          <div id="vignettes2">
+         
             <div id="hotelmer">
               <a href="#">
                 <img
@@ -210,10 +218,10 @@
                   </div>
                   </div>
               </a>
-            </div>
+              </div>
           </div>
           <!-- Liens vers afficher plus  -->
-          <div id="afficherplus">
+          <div class="link-more">
             <a href="#">
               <h3>Afficher plus</h3>
             </a>
@@ -338,6 +346,7 @@
                     </a>
                  </div>
                  <div class="column">
+                   
                  <div class="Activites-M">
                     
                     <a href="#">
@@ -367,10 +376,11 @@
         
 
     </section>
+  </div>
     <footer>
-      <div class="containerfooter">
+      <div class="container">
 
-      <div class="Apropos">
+      <div class="footer-column">
       <h5>A propos</h5>
       <ul>
         <li> <a href="#" > Fonctionnement du site </a> </li>
@@ -380,7 +390,7 @@
 
     </div>
 
-    <div class="Noshebergements">
+    <div class="footer-column">
 
       <h5>Nos hébergements</h5>
       <ul>
@@ -390,7 +400,7 @@
 
     </div>
 
-    <div class="Assistance">
+    <div class="footer-column">
 
       <h5>Assistance</h5>
       <ul>
@@ -402,6 +412,6 @@
   </div>
 
     </footer>
-</div>
+<!-- </div> -->
   </body>
 </html>
