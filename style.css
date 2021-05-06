@@ -7,11 +7,24 @@ body {
     
 }
 
-.container {
+.container-header {
     margin: 0px auto;
     max-width: 1340px;
     width: 100%;
 }
+
+.container-heberpop {
+    margin: 0px auto;
+    max-width: 1340px;
+    width: 100%;
+}
+
+.container-activites {
+    margin: 0px auto;
+    max-width: 1340px;
+    width: 100%;
+}
+
 
 /* Style général */
 
@@ -155,20 +168,10 @@ input.zonerecherche:target{
     cursor: pointer;
 }
 
-#bouton-rechercher {
-    width: 50px;
-    height: 50px;
-    background-color: #0065fc;
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    font-size: initial;
-    color: white;
-    border-radius: 15px;
-    border: none;
-    position: absolute;
-    left: 405px;
-    cursor: pointer;
+.bouton-rechercher .icon-search {
+    display:none;
 }
+
 
 .mapmarker {
     align-items: center;
@@ -270,7 +273,7 @@ input.zonerecherche:target{
     color:#0065FC;
 }
 
-#infovilles {
+.infovilles {
     display:flex;   
     padding:0 20px 0 0px;
 }
@@ -286,7 +289,7 @@ input.zonerecherche:target{
     height: 10px;
 }
 
-#infovilles p {
+.infovilles p {
     margin-top: 17px;
     margin-left: 15px;
 }
@@ -316,47 +319,42 @@ input.zonerecherche:target{
 }
 
 #hebergement-marseille h3 {
-    font-size: 1em;
+    font-size: 17px;
 }
 
 #hebergement-marseille p {
     color:black;
 }
 
-#vignettes {
+.box-container-hebergements {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .info-hebergement {
-    
     margin-left: 10px;
     padding-top: 8px;
     line-height: 5px;
 }
 
-#cannebiere {
-    width:28%;
+#hebergement-marseille .box-hebergements {
+    width: calc(100%/3);
+    box-sizing: border-box;
+    padding:2%;
+    
+}
+
+#hebergement-marseille .box-hebergements a {
     height: 220px;
+    display: block;
     border-radius: 25px;
     background-color: white;
     padding:5px;
-    margin: 5px;
-    margin-bottom: 40px;
     box-shadow:10px 8px 10px rgb(189, 187, 187) ;
 }
 
-#cannebiere:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#cannebiere img {
+#hebergement-marseille .box-hebergements img {
     width:100%;
     height:59%;
     display:block;
@@ -365,147 +363,13 @@ input.zonerecherche:target{
     border-top-right-radius: 15px;
 }
 
-#hotelport {
-    width:28%;;
-    height: 220px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin:5px;
-    margin-bottom: 40px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ;
-}
-
-#hotelport:hover {
+#hebergement-marseille .box-hebergements:hover {
     -webkit-transform:scale(1.08); /* Safari et Chrome */
     -moz-transform:scale(1.08); /* Firefox */
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
     -o-transform:scale(1.08); /* Opera */
     transform:scale(1.08);
     transition: all .25s ease;
-}
-
-#hotelport img {
-    width:100%;
-    height:59%;
-    display:block;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#hotelmouettes {
-    width:28%;
-    height: 220px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin:5px;
-    margin-bottom: 40px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ;
-}
-
-#hotelmouettes:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#hotelmouettes img {
-    width:100%;
-    height:59%;
-    display:block;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#hotelmer {
-    width:28%;
-    height: 220px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin:5px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ;
-}
-
-#hotelmer:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#hotelmer img {
-    width:100%;
-    height:59%;
-    display:block;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#aubergepanier {
-    width:28%;;
-    height: 220px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin:5px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ; 
-}
-
-#aubergepanier:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#aubergepanier img {
-    width:100%;
-    height:59%;
-    display:block;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-#hotelamina {
-    width:28%;;
-    height:220px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin:5px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ; 
-}
-
-#hotelamina:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-
-}
-
-#hotelamina img {
-    width:100%;
-    height:59%;
-    display:block;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 /* Styles des étoiles de notation */
@@ -550,12 +414,16 @@ input.zonerecherche:target{
     margin-top: 30px;
 }
 
+.link-more h3:hover {
+    color:#0065FC;
+}
+
 /* Aside, les plus populaires */
 
  #lespluspopulaires {
     width: 27%;
     background-color: #F2F2F2;
-    padding:30px 20px 35px 20px;
+    padding:30px 20px 30px 20px;
     border-radius: 15px;
     margin-top: 25px;
     position: relative;
@@ -563,12 +431,12 @@ input.zonerecherche:target{
  }
 
 #lespluspopulaires h2 {
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     padding-left: 15px;
  }
  
  #lespluspopulaires h3 {
-    font-size: 1em;
+    font-size: 17px;
 }
 
  .histo {
@@ -578,7 +446,7 @@ input.zonerecherche:target{
      right: 8%;
  }
  
- .info-populaires {
+.info-populaires {
     color:black;
     padding-left: 25px;
     margin:2px 5px 5px 10px;
@@ -591,27 +459,36 @@ input.zonerecherche:target{
 }
 
 .info-populaires .stars {
-    margin-top: 50px ;
-}
+    margin-top: 45px ;
+} 
 
- #vignettespop {
+.box-container-populaires {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top:15.936px;
+    height: 90%;
     
 }
 
-#hotelsoleil {
-    width:90%;
-    height:150px;
+.box-container-populaires .box-hebergements {
+    height: calc(100% / 3);
+    box-sizing: border-box;
+    padding:2%;
+    
+    
+}
+
+.box-container-populaires .box-hebergements a {
+    height: 150px;
+    display:block;
     border-radius: 25px;
     background-color: white;
     padding:5px;
     box-shadow:10px 8px 10px rgb(189, 187, 187) ; 
 }
 
-#hotelsoleil img {
+.box-container-populaires .box-hebergements img {
     width:40%;
     height:100%;
     float: left;
@@ -621,65 +498,7 @@ input.zonerecherche:target{
     padding-right: 10px;
 }
 
-#hotelsoleil:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#chambrecoeur {
-    width:90%;
-    height:150px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin-top: 40px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ; 
-}
-
-#chambrecoeur img {
-    width:40%;
-    height:100%;
-    float: left;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    padding-right: 10px;
-}
-
-#chambrecoeur:hover {
-    -webkit-transform:scale(1.08); /* Safari et Chrome */
-    -moz-transform:scale(1.08); /* Firefox */
-    -ms-transform:scale(1.08); /* Internet Explorer 9 */
-    -o-transform:scale(1.08); /* Opera */
-    transform:scale(1.08);
-    transition: all .25s ease;
-}
-
-#hotelbleublanc {
-    width:90%;
-    height:150px;
-    border-radius: 25px;
-    background-color: white;
-    padding:5px;
-    margin-top: 40px;
-    box-shadow:10px 8px 10px rgb(189, 187, 187) ; 
-}
-
-#hotelbleublanc img {
-    width:40%;
-    height:100%;
-    float: left;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    padding-right: 10px;
-}
-
-#hotelbleublanc:hover {
+.box-container-populaires .box-hebergements:hover {
     -webkit-transform:scale(1.08); /* Safari et Chrome */
     -moz-transform:scale(1.08); /* Firefox */
     -ms-transform:scale(1.08); /* Internet Explorer 9 */
@@ -817,6 +636,7 @@ input.zonerecherche:target{
 
 footer {
     width: 100%;
+    margin: 0 auto;
     max-height: 400px;
     background-color:#f2f2f2;
     padding-bottom: 30px;
@@ -827,6 +647,9 @@ footer .container {
     display: flex;
     font-size: 1em;
     justify-content: space-between;
+    max-width: 1340px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 footer h5 {
@@ -858,18 +681,40 @@ footer a {
 
 /* Responsive design */
 
-@media screen and (min-width: 500px) and (max-width: 5000px) {
-    #bouton-rechercher {
-      color: transparent;
-      background-color: transparent;
+@media all and (max-width:1340px) {
+    
+    .container-header {
+        margin: 0px auto;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
     }
-  }
 
+    .container-activites {
+        margin: 0px auto;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    footer .container {
+        margin: 0px auto;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    
+}
 @media all and (max-width:1024px) {
-    html {
-        width:auto;
+    
+    header {
+        width: 100%;
+        box-sizing: border-box;
     }
-
     nav {
         width: auto;
         text-align: left;
@@ -879,14 +724,21 @@ footer a {
         flex-direction: column;
     }
     
+    .infovilles {
+        margin-bottom: 10px;
+    }
+
     #lespluspopulaires {
         order:1;
         width: 100%;
+        box-sizing: border-box;
+        margin: auto;
+        border-radius:initial;
     }
 
-    #lespluspopulaires h2 {
-        margin-top: 30px;
-     }
+    #lespluspopulaires h3 {
+        font-size: 15px;
+    }
 
     .histo {
         position: absolute;
@@ -894,49 +746,51 @@ footer a {
         right: 4%;
     }
 
-    #vignettespop {
+    .box-container-populaires {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    #hotelsoleil, #chambrecoeur, #hotelbleublanc {
-        width: 270px;
-        height: 150px;
-        margin:auto;
-        margin-bottom: 15px;
-    }
-
+   
     #hebergement-marseille {
         order:2;
         width: 100%;
+        box-sizing: border-box;
         padding-bottom: 25px;
+        background-color:transparent;
     }
     
-    #vignettes {
+    .box-container-hebergements {
         width: auto;
      }
 
-    #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
+    #hebergement-marseille .box-hebergements {
         display:flex;
         flex-direction:initial;
     }
 
-    .stars i {
+    #hebergement-marseille .stars i {
         font-size: 0.7em;
     }
 
-    .info-hebergement {
+    #hebergement-marseille .info-hebergement {
         padding-top:4px;
     }
 
 }
 
-@media all and (max-width:980px) {
+@media all and (max-width:930px) {
 
-    #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
-        width: 200px;
-        height: 180px;
+    .info-populaires p {
+        font-size: 15px;
+        line-height: initial;
+        margin:0px;
     }
+
+    .info-populaires .stars {
+        margin-top: 20px;
+    }
+   
     
 }
 
@@ -951,16 +805,10 @@ footer a {
         width: 100%;
     }
 
-    #vignettespop {
+    .box-container-populaires {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-    }
-
-    #hotelsoleil, #chambrecoeur, #hotelbleublanc {
-        width: 100%;
-        margin:auto;
-        margin-bottom: 15px;
     }
 
     #hebergement-marseille {
@@ -969,16 +817,16 @@ footer a {
         padding-bottom: 25px;
     }
     
-    #vignettes {
+    .box-container-hebergements {
         width: auto;
      }
 
-     #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
+     #hebergement-marseille .box-hebergements {
         display:flex;
         flex-direction:initial;
     }
 
-    #afficherplus {
+    #hebergement-marseille .link-more {
         margin-top: 25px;
     }
 }
@@ -986,9 +834,9 @@ footer a {
 @media all and (max-width:800px) {
 
     .container {
-        margin:0 30px 0 30px;
-        max-width: 800px;
-        width: 85%;
+        margin:0 auto;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     section {
@@ -1002,7 +850,6 @@ footer a {
         width: 100%;
         margin:0 auto;
         padding-top: 10px;
-    
     }
 
     .histo {
@@ -1011,35 +858,25 @@ footer a {
     }
 
     #lespluspopulaires h3 {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     #lespluspopulaires p {
-        font-size:11px;
+        font-size:12px;
+        line-height: initial;
     }
 
     .info-populaires .stars {
-        margin-top:5px;
-    }
+        font-size: 10px;
+        margin-top:15px;
+    } 
 
-    #vignettespop {
+    .box-container-populaires {
         flex-direction: row;
         justify-content: space-around;
     }
 
-    #hotelsoleil, #chambrecoeur, #hotelbleublanc {
-        width: 50%;
-        height: 90px;
-       
-    }
     
-    #chambrecoeur, #hotelbleublanc {
-        margin-left: 10px;  
-    }
-
-    #hotelsoleil img, #chambrecoeur img, #hotelbleublanc img {
-        width:35%;
-    }
 /* Hébergement Marseille */
 
     #hebergement-marseille {
@@ -1049,17 +886,29 @@ footer a {
         padding-top: 10px;
     }
 
+    #hebergement-marseille h3 {
+        font-size: 16px;
+    }
+
+    #hebergement-marseille p {
+        font-size: 14px;
+    }
+
     .info-hebergement .stars {
         margin-top:2px;
     }
 
-    #vignettes {
+    .box-container-hebergements {
         width: auto;
      }
 
-     #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
-        display:flex;
-        flex-direction:initial;
+    #hebergement-marseille .box-hebergements {
+        
+        
+    }
+    
+    #hebergement-marseille .box-hebergement a {
+        height: 180px;
     }
 
     /* Activités à Marseille */
@@ -1074,6 +923,10 @@ footer a {
         width: 100%;
     }
 
+    #activites-marseille h3 {
+        padding-left: 15px;
+    }
+
     #PartieGauche {
         width: 100%;
         justify-content: center;
@@ -1081,23 +934,37 @@ footer a {
        
     }
 
+    .Activites-G {
+        width: 50%;
+        
+    }
+
+    .column {
+        width: 50%;
+        
+    }
+
+    .Activites-P {
+        width: 100%;
+    }
+
+    .Activites-M {
+        width: 100%;
+    }
+
     #PartieDroite {
         width: 100%;
         justify-content: center;
-        
        
     }
-
-
 }
 
 @media all and (max-width:530px) {
     
     .container {
         margin:0 auto;
-        max-width: 530px;
-        min-width: 375px;
         width: 100%;
+        box-sizing: border-box;
     }
     
     header {
@@ -1182,14 +1049,29 @@ footer a {
         padding-right: 20px;
     }
 
-    .bouton-rechercher {
+    .btn-txt {
         display: none;
-      }
-    
-    #bouton-rechercher {
-        color: white;
+    }
+
+    .bouton-rechercher .icon-search {
+        color:white;
+        display:initial;
+    }
+
+    .bouton-rechercher {
+        width: 50px;
+        height: 50px;
         background-color: #0065fc;
-      }
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: initial;
+        color: white;
+        border-radius: 15px;
+        border: none;
+        position: relative;
+        right: 15px;
+        cursor: pointer;
+    }
 
 /* Filtres */
 
@@ -1203,7 +1085,7 @@ footer a {
           padding-right: 300px;
       }
 
-      #infovilles {
+      .infovilles {
         margin-left: 30px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -1211,7 +1093,7 @@ footer a {
 
 /* Hébergement Marseille + les plus populaires */
 
-    #First , #Second {
+    .first-section , #Second {
        margin:0 auto;
        width: 100%;
     }
@@ -1222,9 +1104,9 @@ footer a {
         flex-direction: row;
         border-radius: 0;
         margin:0 auto;
+        box-sizing: border-box;
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        
         padding-bottom: 20px;
     }
 
@@ -1232,20 +1114,36 @@ footer a {
         margin-left: 30px;
     }
 
+    #lespluspopulaires h3 {
+        font-size: 16px;
+    }
+
+    #lespluspopulaires p {
+        font-size: 15px;
+    }
+
+    #lespluspopulaires .stars {
+        font-size: 15px;
+    }
+
     .histo {
-        top: 9%;
+        top: 5%;
         right: 9%;
     }
 
-    #vignettespop {
+    .box-container-populaires {
        width: 100%;
+       display: initial;
+       box-sizing: border-box;
     }
 
-    #hotelsoleil, #chambrecoeur, #hotelbleublanc {
-        width: 85%;
-        height: 145px;
+    #lespluspopulaires .box-hebergements {
+        width: 100%;
         margin:auto;
-        margin-bottom: 15px;
+    }
+
+    #lespluspopulaires .box-hebergements a {
+        height:145px ;
     }
 
 /* Hébergement marseille */
@@ -1253,25 +1151,23 @@ footer a {
     #hebergement-marseille {
         order:2;
         width: 100%;
-        margin:0;
         padding-bottom: 25px;
-        padding-left: 0;
-        padding-right: 0;
+        box-sizing: border-box;
+        margin:auto;
         background-color: transparent;
     }
 
     #hebergement-marseille h2 {
         margin-left: 30px;
     }
-    
-    #vignettes {
-        width: auto;
-     }
 
-    #cannebiere, #hotelport, #hotelmouettes, #hotelmer , #aubergepanier, #hotelamina {
-        width:85%;
+    #hebergement-marseille .box-hebergements {
+        width:100%;
+        margin: auto;
+    }
+
+    #hebergement-marseille .box-hebergements a {
         height: 200px;
-        margin-bottom: 20px;
     }
 
     .link-more {
@@ -1306,7 +1202,7 @@ footer a {
 
 
     .Activites-G, .Activites-M, .Activites-P {
-        width: 85%;
+        width: 90%;
         height: 190px;
         margin:0 auto;
         margin-bottom: 24px;   
@@ -1318,6 +1214,11 @@ footer a {
     
     .Activites-P:last-child {
         margin-bottom: 0;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 25px;
     }
 
 /* Footer */
