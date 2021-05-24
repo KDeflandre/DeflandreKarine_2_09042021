@@ -791,7 +791,11 @@ footer a {
     } 
 }
 
-
+@media all and (max-width:900px) {
+    .footer-column {
+        padding:15px;
+    }
+}
 @media all and (max-width:930px) {
 
     #lespluspopulaires h3 {
@@ -812,10 +816,7 @@ footer a {
         padding-left: 0.938em;
     }
     
-    /* Footer */
-    .footer-column {
-        padding:10px;
-    }
+    
 }
 
 @media all and (max-width:870px) {
