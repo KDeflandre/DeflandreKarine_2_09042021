@@ -812,6 +812,10 @@ footer a {
         padding-left: 0.938em;
     }
     
+    /* Footer */
+    .footer-column {
+        padding:10px;
+    }
 }
 
 @media all and (max-width:870px) {
@@ -956,7 +960,7 @@ footer a {
     }
 
     .footer-column {
-        padding: 5px;
+        padding: 15px;
     }
 }
 
@@ -1014,9 +1018,9 @@ footer a {
         width: 100%;
     }
 
-    #hebergement-marseille .box-hebergements img {
+    /* #hebergement-marseille .box-hebergements img {
         height: 65%;
-    }
+    } */
 
     #hebergement-marseille .link-more {
         margin-top: 25px;
@@ -1266,7 +1270,9 @@ footer a {
     }
 
     #hebergement-marseille h2 {
-        margin-left: 30px;
+        margin-left: 0px;
+        text-align: center;
+        padding-left: 0;
     }
 
     #hebergement-marseille .box-hebergements {
@@ -1296,7 +1302,10 @@ footer a {
     }
 
     #activites-marseille h2 {
-        padding-left: 30px;
+        margin-left: 0px;
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 18px;
     }
 
     #activites-marseille h3 {
